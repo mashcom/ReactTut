@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/layout/Header';
 import './App.css';
+import Contacts from './components/contacts/Contacts';
+import {Provider} from './context';
+import AddContact from './components/contacts/AddContact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Provider>
+      <React.Fragment>
+        <Header branding="Contact Manager"/>
+        <main className="py-4">
+          <div className="container">
+            <AddContact/>
+            <Contacts/>
+          </div>
+        </main>
+      </React.Fragment>
+    </Provider>
   );
 }
 
