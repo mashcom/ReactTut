@@ -25,10 +25,10 @@ class Contact extends Component {
                         const {dispatch}  = value;
                         return (
                             <div className="card card-body mb-3">
-                                <h4>{name} 
+                                <h6>{name} 
                                     <button onClick={this.onShowClick} className="btn float-right font-weight-bold btn-primary btn-xs">Toggle</button>
                                     <button onClick ={this.onDeleteClick.bind(this,id,dispatch)} className="btn float-right font-weight-bold btn-danger btn-xs mx-1">Delete</button>
-                                </h4>
+                                </h6>
                                 {showContactInfo?(
                                 <ul className="list-group">
                                     <li className="list-group-item">Email: {email}</li>

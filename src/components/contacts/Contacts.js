@@ -4,6 +4,11 @@ import {Consumer} from '../../context';
 
 class Contacts extends Component {
    
+    componentDidMount(){
+        fetch('http://localhost/ww5/wp-json/wp/v2/posts')
+        .then(response=>response.json())
+        .then(json=> console.log(json))
+    }
     
     render() {
         
